@@ -1,16 +1,30 @@
-import { blue, pink, purple } from "@mui/material/colors";
-import { createTheme } from "@mui/material/styles";
-export const appTheme = createTheme({
+import { blue, pink } from "@mui/material/colors";
+
+export const appTheme = (mode: PaletteMode) => ({
     palette: {
-        primary: {
-          light: blue[300],
-          main: "#178841",
-          dark: blue[700],
-        },
-        secondary: {
-          light: pink[300],
-          main: "#11cb5f",
-          dark: pink[700],
-        },
-      },
-});
+      mode,
+      ...(mode === 'light'
+        ? {
+            // palette values for light mode
+            primary: blue,
+            divider: blue[200],
+            text: {
+              primary: pink[900],
+              secondary: pink[800],
+            },
+          }
+        : {
+            // palette values for dark mode
+            primary: blue,
+            divider: blue[700],
+            background: {
+              default: blue[900],
+              paper: blue[900],
+            },
+            text: {
+              primary: '#fff',
+              secondary: blue[500],
+            },
+          }),
+    },
+  });
