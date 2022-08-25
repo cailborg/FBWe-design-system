@@ -1,0 +1,22 @@
+{
+    "light": {
+        "primary": {
+            "main": "#178841"
+        },
+        "divider": "#178841",
+        "text": {
+            "primary": "#333",
+            "secondary": "#eee"
+        }
+    },
+    "dark": {
+        "primary": {
+            "main": "#623476"
+        },
+        "divider": "#178841",
+        "text": {
+            "primary": "#000",
+            "secondary": "#982356"
+        }
+    }
+}
